@@ -1,0 +1,11 @@
+.char-card img{
+    width: 200px;
+}
+
+.char-card{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
