@@ -14,18 +14,27 @@ function Header() {
   const {darkMode, setDarkMode} = useContext(ThemeContext);
   //state is OBJEC, that is why 2 curly braces later
 
+  const handleTheme = () =>{
+    //toggle
+    setDarkMode(!darkMode)
+    //send to local storage
+    localStorage.setItem("darkMode", !darkMode)
+  }
+
   return (
     <div className=  {darkMode ? "header-container header-dark":"header-container"}>
-      <div>
+      <div className="header-links">
         {/* <a href='/about'>About</a>
         <a href="/">Home</a> */}
-        <Link to='/about'>About</Link>
-        <Link to="/">Home</Link>
+        {/* <Link to="/" >Home</Link> */}
+        <a href="/" >Home</a>
+        <a href='/about' >About</a>
+        
       </div>
-      <div style={{display:"Flex"}}>
+      {/* <div style={{display:"Flex"}}>
         <p style={{marginRight:"10px"}}>Welcome {userName}! </p>
-        <button onClick={()=>setDarkMode(!darkMode)}>{darkMode?"Light Mode":"Dark Mode"}</button>
-      </div>
+        <button onClick={handleTheme}>{darkMode?"Light Mode":"Dark Mode"}</button>
+      </div> */}
     </div>
   )
 }

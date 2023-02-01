@@ -31,10 +31,14 @@ function CharacterDetails() {
     <div className="details-container">
         <img src={characterDetails?.image} />
         <div className="char-info">
-            <p>{characterDetails?.name}</p>
-            <p>{characterDetails?.gender}</p>
-            <p>{characterDetails?.species}</p>
-            <p>{characterDetails?.status}</p>
+            <h3>{characterDetails?.name}</h3>
+            <ul>
+            <li>{characterDetails?.gender}</li>
+            <li>{characterDetails?.species}</li>
+            <li>{characterDetails?.status}</li>
+
+            </ul>
+            
         </div>
     </div>
   )

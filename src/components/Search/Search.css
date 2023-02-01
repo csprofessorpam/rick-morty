@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 60px;
+
 }
 
 .search-container input{
@@ -12,6 +13,12 @@
     height: 35px;
     font-size: 1.5em;
     border-radius: 8px;
+    
     background-color:blueviolet;
+    color: white;
+    text-align: center;
+}
+
+::placeholder{
     color: white;
 }

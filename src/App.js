@@ -14,22 +14,22 @@ import ThemeContextProvider from './contexts/ThemeContext'
 
 function App() {
 
-  const[characters, setCharacters] = React.useState([]);
+  // const[characters, setCharacters] = React.useState([]);
 
-  //connect to api here and then send data where needed
+  // //connect to api here and then send data where needed
 
-  React.useEffect(
+  // React.useEffect(
 
-    ()=>{
-        //console.log("page loaded");
-        axios.get("https://rickandmortyapi.com/api/character")
-        .then(res=>{
-          console.log(res.data.results);
-          setCharacters(res.data.results);
-        })
-        .catch(err=>console.log(err))
-    }, []
-  )
+  //   ()=>{
+  //       //console.log("page loaded");
+  //       axios.get("https://rickandmortyapi.com/api/character")
+  //       .then(res=>{
+  //         console.log(res.data.results);
+  //         setCharacters(res.data.results);
+  //       })
+  //       .catch(err=>console.log(err))
+  //   }, []
+  // )
 
 
   return (
@@ -37,11 +37,13 @@ function App() {
       <BrowserRouter>
       <UserContextProvider>
       <ThemeContextProvider>
+        
         <Header />
 
           <Routes>
-          <Route path="/"  element={<Homepage  characters={characters}
-                                               setCharacters={setCharacters} />}    />
+          <Route path="/"  element={<Homepage />}    />
+          {/* <Route path="/"  element={<Homepage 
+                                   characters={characters}setCharacters={setCharacters} />}    /> */}
             <Route path="/about"  element={<About />}    />
             <Route path="/contact"  element={<ContactUs />}    />
             <Route path="/details/:id"  element={<CharacterDetails />}    />

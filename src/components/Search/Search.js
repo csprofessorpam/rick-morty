@@ -10,8 +10,8 @@ function Search(props) {
     //api has request for filtering
 
     const handleChange = (event)=>{
-        console.log(event.target.value);
-        setSearchValue(event.target.value);
+        console.log(event.target);
+       // setSearchValue(event.target.value);
     }
 
     //function to call api
@@ -27,12 +27,17 @@ function Search(props) {
         })
         .catch(err => {
             //console.log(err)
-            if (err.response.status === 404){
-                alert("no character with this name'")
-            }
-            else{
+            // if (err.response.status === 404){
+            //     alert("no character with this name")
+            // }
+            // else{
+               if (err.response.status === 404) {
+                alert("no matching character")
+               }
+               else{
                 console.log(err)
-            }
+               }
+            //}
         })
 
         //setCharacters to new data
@@ -40,7 +45,10 @@ function Search(props) {
 
   return (
     <form className="search-container" onSubmit={handleSubmit}>
-        <input onChange={handleChange} placeholder="Search all characters" />
+        <input 
+        // onChange={(e)=>setSearchValue(e.target.value)} 
+        onChange={handleChange}
+        placeholder="Search all characters" />
         {/* <button type="submit">Submit</button> */}
     </form>
   )

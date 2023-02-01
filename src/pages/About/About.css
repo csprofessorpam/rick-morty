@@ -1,0 +1,13 @@
+.about-container p{
+    margin: 20px;
+    line-height: 1.5;
+}
+
+.about-dark{
+    background-color: black;
+    color: white;
+}
+
+.about-container h1{
+    text-align: center;
+}

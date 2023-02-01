@@ -4,11 +4,23 @@
     color: white;
     height: 40px;
     padding: 0 20px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .header-dark{
     background-color: black;
+}
+
+.header-links{
+    /* width: 150px; */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-links a{
+    color: white;
 }
