@@ -9,21 +9,25 @@ function Search(props) {
 
     //api has request for filtering
 
-    const handleChange = (event)=>{
-        console.log(event.target);
-       // setSearchValue(event.target.value);
+    const handleChange = (e)=>{
+        console.log(e.target.value);
+       setSearchValue(e.target.value);
     }
 
     //function to call api
     const handleSubmit = (event) =>{
-        //alert('worked');
+        //alert('search');
         event.preventDefault();  //stop page refresh
-        console.log("submit");
+        console.log("submit", searchValue);
         //call api to get data
         axios.get(`https://rickandmortyapi.com/api/character/?name=${searchValue}`)
         .then(res =>{
             console.log(res.data.results);
             props.setCharacters(res.data.results);
+
+            //clear textbox
+            setSearchValue("")
+
         })
         .catch(err => {
             //console.log(err)
@@ -48,7 +52,8 @@ function Search(props) {
         <input 
         // onChange={(e)=>setSearchValue(e.target.value)} 
         onChange={handleChange}
-        placeholder="Search all characters" />
+        placeholder="Search all characters"
+        value={searchValue} />
         {/* <button type="submit">Submit</button> */}
     </form>
   )

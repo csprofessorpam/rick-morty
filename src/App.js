@@ -6,7 +6,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ContactUs from './pages/ContactUS/ContactUs';
 import Homepage from './pages/Homepage/Homepage';
 
-import axios from 'axios'
+//import axios from 'axios'
 import React from 'react'
 import CharacterDetails from './pages/CharacterDetails/CharacterDetails';
 import UserContextProvider from './contexts/UserContext'

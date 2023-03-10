@@ -4,9 +4,10 @@
     color: white;
     height: 40px;
     padding: 0 20px;
-    /* display: flex;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; */
+     
 }
 
 .header-dark{
@@ -14,7 +15,7 @@
 }
 
 .header-links{
-    /* width: 150px; */
+    width: 20%;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -23,4 +24,11 @@
 
 .header-links a{
     color: white;
+}
+
+.message{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
 }
