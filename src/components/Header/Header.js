@@ -11,7 +11,7 @@ function Header() {
   //extract values from global state
   const {userName} = useContext(UserContext);
 
-  const {darkMode} = useContext(ThemeContext);
+  const {darkMode, setDarkMode} = useContext(ThemeContext);
   //state is OBJEC, that is why 2 curly braces later
 
   const handleTheme = () =>{
