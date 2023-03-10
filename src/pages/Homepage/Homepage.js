@@ -7,7 +7,7 @@ import axios from 'axios'
 
 function Homepage() {
 
-    const {darkMode, setDarkMode} = useContext(ThemeContext);
+    const {darkMode} = useContext(ThemeContext);
 
     const[characters, setCharacters] = React.useState([]);
 
